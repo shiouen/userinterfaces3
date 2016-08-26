@@ -1,51 +1,64 @@
+'use strict';
+
 const del = require('del');
-
 const gulp = require('gulp');
-
+const shell = require('gulp-shell');
 const sourcemaps = require('gulp-sourcemaps');
 const typescript = require('gulp-typescript');
 const tsconfig = require('./tsconfig.json');
-
 const sass = require('gulp-sass');
 
+const paths = {
+    dist: {
+        app: 'dist/app',
+        css: 'dist/app/**/*.css',
+        js: 'dist/app/**/*.js*',
+        src: 'dist'
+    },
+    app: {
+        scss: 'app/**/*.scss',
+        ts: 'app/**/*.ts',
+        src: 'app'
+    }
+};
+
+gulp.task('clean:css', function () {
+    return del(paths.dist.css);
+});
+gulp.task('clean:js', function () {
+    return del(paths.dist.js);
+});
 gulp.task('clean', function () {
-    return del('dist');
+    return del(paths.dist.src);
 });
 
 gulp.task('transpile:scss', function () {
-    gulp.src('app/**/*.scss')
+    return gulp.src(paths.app.scss)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/app'));
+        .pipe(gulp.dest(paths.dist.app));
 });
 gulp.task('transpile:ts', function () {
-    return gulp
-        .src('app/**/*.ts')
+    return gulp.src(paths.app.ts)
         .pipe(sourcemaps.init())
         .pipe(typescript(tsconfig.compilerOptions))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/app'));
 });
-gulp.task('transpile', function () {
-    gulp.start('transpile:scss');
-    gulp.start('transpile:ts');
-});
+gulp.task('transpile', gulp.series('transpile:scss', 'transpile:ts'));
 
 gulp.task('watch:scss', function () {
-    gulp.watch('app/**/*.scss', ['transpile:scss']);
+    return gulp.watch(paths.app.scss, gulp.task('transpile:scss'));
 });
 gulp.task('watch:ts', function () {
-    gulp.watch('app/**/*.ts', ['transpile:ts']);
+    return gulp.watch(paths.app.ts, gulp.task('transpile:ts'));
 });
-gulp.task('watch', function () {
-    gulp.start('watch:scss');
-    gulp.start('watch:ts');
-});
+gulp.task('watch', gulp.parallel('watch:scss', 'watch:ts'));
 
-gulp.task('compile', function () {
-    gulp.start('transpile');
-});
-gulp.task('build', ['clean'], function () {
-    gulp.start('compile');
-    gulp.start('watch');
-});
-gulp.task('default', ['build']);
+gulp.task('build', gulp.series('clean', 'transpile'));
+
+gulp.task('serve:lite', shell.task([
+    'npm start'
+]));
+gulp.task('serve', gulp.series('build', gulp.parallel('watch', 'serve:lite')));
+
+gulp.task('default', gulp.task('serve'));
