@@ -1,2 +1,8 @@
+# output
+dist
+
+# npm
+node_modules
+
 # WebStorm
 .idea
