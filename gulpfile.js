@@ -22,22 +22,22 @@ const paths = {
     }
 };
 
-gulp.task('clean:css', function () {
+gulp.task('clean:css', () => {
     return del(paths.dist.css);
 });
-gulp.task('clean:js', function () {
+gulp.task('clean:js', () => {
     return del(paths.dist.js);
 });
-gulp.task('clean', function () {
+gulp.task('clean', () => {
     return del(paths.dist.src);
 });
 
-gulp.task('transpile:scss', function () {
+gulp.task('transpile:scss', () => {
     return gulp.src(paths.app.scss)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(paths.dist.app));
 });
-gulp.task('transpile:ts', function () {
+gulp.task('transpile:ts', () => {
     return gulp.src(paths.app.ts)
         .pipe(sourcemaps.init())
         .pipe(typescript(tsconfig.compilerOptions))
@@ -46,10 +46,10 @@ gulp.task('transpile:ts', function () {
 });
 gulp.task('transpile', gulp.series('transpile:scss', 'transpile:ts'));
 
-gulp.task('watch:scss', function () {
+gulp.task('watch:scss', () => {
     return gulp.watch(paths.app.scss, gulp.task('transpile:scss'));
 });
-gulp.task('watch:ts', function () {
+gulp.task('watch:ts', () => {
     return gulp.watch(paths.app.ts, gulp.task('transpile:ts'));
 });
 gulp.task('watch', gulp.parallel('watch:scss', 'watch:ts'));
