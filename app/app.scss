@@ -1,3 +1,9 @@
-h1 {
-  color:red;
+.container {
+    margin: 0 auto;
+}
+
+.test {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>',
-    styleUrls: ['dist/app/app.css']
+    selector: 'campus-info',
+    templateUrl: 'app/app.html',
+    styleUrls: ['dist/app/reset.css', 'dist/app/app.css']
 })
 
 export class AppComponent { }
