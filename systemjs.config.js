@@ -3,12 +3,14 @@
     var map = {
         'app':                        'dist/app',
         '@angular':                   'node_modules/@angular',
-        'rxjs':                       'node_modules/rxjs'
+        'rxjs':                       'node_modules/rxjs',
+        'primeng':                    'node_modules/primeng'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'app':                        { main: 'boot',  defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
+        'primeng':                    { defaultExtension: 'js' }
     };
     var ngPackageNames = [
         'common',
@@ -34,6 +36,7 @@
     var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
     // Add package entries for angular packages
     ngPackageNames.forEach(setPackageConfig);
+
     var config = {
         map: map,
         packages: packages
