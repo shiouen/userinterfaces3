@@ -1,5 +1,5 @@
 <div class="test">
-    <p>{{ room.has_projector }}</p>
-    <p>lol</p>
+    <p *ngFor="let room of rooms">{{ room.name }}</p>
     <span>elblfv</span>
 </div>
+<campus-info></campus-info>

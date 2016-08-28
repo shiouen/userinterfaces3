@@ -1,6 +1,6 @@
 'use strict';
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Room } from "./room/room.model";
 import { RoomService } from "./room/room.service";
@@ -11,10 +11,14 @@ import { RoomService } from "./room/room.service";
     styleUrls: [ 'dist/app/app.css' ]
 })
 
-export class AppComponent {
-    private room: Room;
+export class AppComponent implements OnInit {
+    private rooms: Room[];
+    private floor: number;
 
-    constructor(private service: RoomService) {
-        this.room = service.getRoom(1);
+    constructor(private roomService: RoomService) { }
+
+    ngOnInit() {
+        this.roomService.getRooms().subscribe((rooms: Room[]) => { this.rooms = rooms });
+        this.floor = 0;
     }
 }

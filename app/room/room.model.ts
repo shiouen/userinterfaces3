@@ -7,20 +7,22 @@ export class Room {
     /**
      * Constructor.
      *
+     * @param id {Number} Room id.
      * @param name {String} Room name.
      * @param type {RoomType} Room type.
      * @param description {String} Room description.
      * @param capacity {Number} Room capacity.
-     * @param board_type {BoardType} Board type.
-     * @param has_projector {Boolean} Whether a projector is provided.
-     * @param has_sound_reinforcement {Boolean} Whether sound reinforcement is provided.
+     * @param boardType {BoardType} Board type.
+     * @param hasProjector {Boolean} Whether a projector is provided.
+     * @param hasSoundReinforcement {Boolean} Whether sound reinforcement is provided.
      */
     constructor(
+        private id: number,
         private name: string,
         private type: RoomType,
         private description: string,
         private capacity: number,
-        private board_type: BoardType,
-        private has_projector: boolean,
-        private has_sound_reinforcement:boolean) { }
+        private boardType: BoardType,
+        private hasProjector: boolean,
+        private hasSoundReinforcement:boolean) { }
 }

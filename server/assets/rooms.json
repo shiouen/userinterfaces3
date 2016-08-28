@@ -1,0 +1,200 @@
+[
+    {
+        "id": 0,
+        "name": "R001",
+        "type": "Auditory",
+        "description": "Primary auditory.",
+        "capacity": 300,
+        "boardType": "Smart",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 1
+    },
+    {
+        "id": 1,
+        "name": "R002",
+        "type": "Auditory",
+        "description": "Smaller auditory.",
+        "capacity": 175,
+        "boardType": "Marker",
+        "hasProjector": true,
+        "hasSoundReinforcement": false,
+        "level": 1
+    },
+    {
+        "id": 2,
+        "name": "R003",
+        "type": "Auditory",
+        "description": "",
+        "capacity": 1,
+        "boardType": "",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 1
+    },
+    {
+        "id": 3,
+        "name": "R004",
+        "type": "Study",
+        "description": "Primary study.",
+        "capacity": 150,
+        "boardType": "None",
+        "hasProjector": false,
+        "hasSoundReinforcement": false,
+        "level": 1
+    },
+    {
+        "id": 4,
+        "name": "R005",
+        "type": "Sanitary",
+        "description": "Toilets.",
+        "capacity": 25,
+        "boardType": "",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 1
+    },
+    {
+        "id": 5,
+        "name": "R006",
+        "type": "Other",
+        "description": "Storage room.",
+        "capacity": 0,
+        "boardType": "None",
+        "hasProjector": false,
+        "hasSoundReinforcement": false,
+        "level": 1
+    },
+    {
+        "id": 6,
+        "name": "R101",
+        "type": "Auditory",
+        "description": "Primary auditory.",
+        "capacity": 300,
+        "boardType": "Smart",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 1
+    },
+    {
+        "id": 7,
+        "name": "R102",
+        "type": "Auditory",
+        "description": "Smaller auditory.",
+        "capacity": 175,
+        "boardType": "Marker",
+        "hasProjector": true,
+        "hasSoundReinforcement": false,
+        "level": 1
+    },
+    {
+        "id": 8,
+        "name": "R103",
+        "type": "Auditory",
+        "description": "",
+        "capacity": 1,
+        "boardType": "",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 1
+    },
+    {
+        "id": 9,
+        "name": "R104",
+        "type": "Study",
+        "description": "Primary study.",
+        "capacity": 150,
+        "boardType": "None",
+        "hasProjector": false,
+        "hasSoundReinforcement": false,
+        "level": 1
+    },
+    {
+        "id": 10,
+        "name": "R105",
+        "type": "Sanitary",
+        "description": "Toilets.",
+        "capacity": 25,
+        "boardType": "",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 1
+    },
+    {
+        "id": 11,
+        "name": "R106",
+        "type": "Other",
+        "description": "Storage room.",
+        "capacity": 0,
+        "boardType": "None",
+        "hasProjector": false,
+        "hasSoundReinforcement": false,
+        "level": 1
+    },
+    {
+        "id": 12,
+        "name": "R201",
+        "type": "Auditory",
+        "description": "Primary auditory.",
+        "capacity": 300,
+        "boardType": "Smart",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 2
+    },
+    {
+        "id": 13,
+        "name": "R202",
+        "type": "Auditory",
+        "description": "Smaller auditory.",
+        "capacity": 175,
+        "boardType": "Marker",
+        "hasProjector": true,
+        "hasSoundReinforcement": false,
+        "level": 2
+    },
+    {
+        "id": 14,
+        "name": "R203",
+        "type": "Auditory",
+        "description": "",
+        "capacity": 1,
+        "boardType": "",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 2
+    },
+    {
+        "id": 15,
+        "name": "R204",
+        "type": "Study",
+        "description": "Primary study.",
+        "capacity": 150,
+        "boardType": "None",
+        "hasProjector": false,
+        "hasSoundReinforcement": false,
+        "level": 2
+    },
+    {
+        "id": 16,
+        "name": "R205",
+        "type": "Sanitary",
+        "description": "Toilets.",
+        "capacity": 25,
+        "boardType": "",
+        "hasProjector": true,
+        "hasSoundReinforcement": true,
+        "level": 2
+    },
+    {
+        "id": 17,
+        "name": "R206",
+        "type": "Other",
+        "description": "Storage room.",
+        "capacity": 0,
+        "boardType": "None",
+        "hasProjector": false,
+        "hasSoundReinforcement": false,
+        "level": 2
+    }
+]

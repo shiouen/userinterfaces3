@@ -1,17 +1,24 @@
 'use strict';
 
 import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
+import { Http, Response } from "@angular/http";
 
-import { BoardType } from "./board-type.enum";
 import { Room } from "./room.model";
-import { RoomType } from "./room-type.enum";
+import { Observable } from "rxjs";
+
+import 'rxjs/Rx';
 
 @Injectable()
 export class RoomService {
-    constructor(private http: Http) { }
+    private baseUrl: string;
 
-    public getRoom(id: number) {
-        return new Room("test", RoomType.Auditory, "descr", 1, BoardType.Chalk, true, true);
+    constructor(private http: Http) {
+        this.baseUrl = 'server/assets';
+    }
+
+    public getRooms(): Observable<Room[]> {
+        const url = `${this.baseUrl}/rooms.json`;
+        return this.http.get(url)
+            .map((res: Response) => res.json());
     }
 }
