@@ -1,9 +1,9 @@
 'use strict';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }            from '@angular/core';
 
-import { Room } from "./room/room.model";
-import { RoomService } from "./room/room.service";
+import { Room }                         from './room/room.model';
+import { RoomService }                  from './room/room.service';
 
 @Component({
     selector: 'campus-info',
@@ -12,13 +12,13 @@ import { RoomService } from "./room/room.service";
 })
 
 export class AppComponent implements OnInit {
-    private rooms: Room[];
     private floor: number;
+    private rooms: Room[];
 
     constructor(private roomService: RoomService) { }
 
     ngOnInit() {
-        this.roomService.getRooms().subscribe((rooms: Room[]) => { this.rooms = rooms });
         this.floor = 0;
+        this.roomService.getRooms().subscribe((rooms: Room[]) => { this.rooms = rooms });
     }
 }

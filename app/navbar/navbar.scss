@@ -1,0 +1,28 @@
+$background: #313B3F;
+
+.navbar {
+    background-color: $background;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        width: 75px;
+    }
+
+    .text {
+        color: white;
+        font-family: Roboto, Helvetica Neue, sans-serif;
+    }
+
+    @media (min-width: 769px) {
+        .icon {
+            width: 100px;
+        }
+    }
+}

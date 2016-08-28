@@ -1,14 +1,20 @@
 'use strict';
 
-import { NgModule }             from '@angular/core';
+import { NgModule }                     from '@angular/core';
 
-import { FloorMapComponent }    from "./floor-map.component";
-import { ListComponent }        from "./list.component";
+import { appRoutingProviders, routing } from "./campus-info.routing";
+
+import { FilterPanelComponent }         from "./filter-panel/filter-panel.component";
+import { FloorMapComponent }            from "./floor-map/floor-map.component";
+import { FloorListComponent }           from "./floor-list/floor-list.component";
 
 @NgModule({
     declarations: [
-        FloorMapComponent,
-        ListComponent
-    ]
+        FilterPanelComponent,
+        FloorListComponent,
+        FloorMapComponent
+    ],
+    imports: [ routing ],
+    providers: [ appRoutingProviders ]
 })
 export class CampusInfoModule { }
