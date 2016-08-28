@@ -12,10 +12,12 @@ const paths = {
     dist: {
         app: 'dist/app',
         css: 'dist/app/**/*.css',
+        html: 'dist/app/**/*.html',
         js: 'dist/app/**/*.js*',
         src: 'dist'
     },
     app: {
+        html: 'app/**/*.html',
         scss: 'app/**/*.scss',
         ts: 'app/**/*.ts',
         src: 'app'
@@ -25,12 +27,21 @@ const paths = {
 gulp.task('clean:css', () => {
     return del(paths.dist.css);
 });
+gulp.task('clean:html', () => {
+    return del(paths.dist.html);
+})
 gulp.task('clean:js', () => {
     return del(paths.dist.js);
 });
 gulp.task('clean', () => {
     return del(paths.dist.src);
 });
+
+gulp.task('copy:html', () => {
+    return gulp.src(paths.app.html)
+        .pipe(gulp.dest(paths.dist.app));
+});
+gulp.task('copy', gulp.parallel('copy:html'));
 
 gulp.task('transpile:scss', () => {
     return gulp.src(paths.app.scss)
@@ -46,6 +57,9 @@ gulp.task('transpile:ts', () => {
 });
 gulp.task('transpile', gulp.series('transpile:scss', 'transpile:ts'));
 
+gulp.task('watch:html', () => {
+    return gulp.watch(paths.app.html, gulp.task('copy:html'));
+});
 gulp.task('watch:scss', () => {
     return gulp.watch(paths.app.scss, gulp.task('transpile:scss'));
 });
