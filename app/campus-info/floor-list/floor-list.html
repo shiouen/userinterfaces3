@@ -1,2 +1,9 @@
 <div class="floor-list">
+    <div class="floor-list__container">
+        <div *ngFor="let room of rooms">
+            <div *ngIf="room.floor === floor">
+                <listed-room [room]="room"></listed-room>
+            </div>
+        </div>
+    </div>
 </div>

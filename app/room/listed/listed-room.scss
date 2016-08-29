@@ -1,0 +1,11 @@
+.listed-room {
+    margin: 10px 0;
+
+    &__properties {
+
+        .ui-fieldset-legend:hover {
+            background-color: #eeeeee;
+            cursor: pointer;
+        }
+    }
+}

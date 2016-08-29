@@ -20,8 +20,8 @@ export class FloorMapComponent implements OnInit {
     }
 
     public ngOnInit(): void {
-        this.roomService.getRooms()
-            .subscribe((rooms: Room[]) => this.rooms = rooms
-                .filter((room: Room) => { return this.filterPanelService.floor === room.floor }));
+        this.roomService.getRooms().subscribe((rooms: Room[]) => {
+            this.rooms = rooms;
+        });
     }
 }

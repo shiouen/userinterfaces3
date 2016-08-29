@@ -9,4 +9,12 @@ $text-color: #313b3f;
     font-family: $fonts;
     margin: 20px;
     padding: 20px;
+
+    @media (min-width: 376px) {
+        margin: 25px;
+    }
+
+    @media (min-width: 769px) {
+        margin: 40px;
+    }
 }

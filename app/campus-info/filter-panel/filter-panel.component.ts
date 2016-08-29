@@ -37,7 +37,7 @@ export class FilterPanelComponent {
         this.showName = filterPanelService.showName;
         this.showType = filterPanelService.showType;
 
-        this.view = 'map';
+        this.view = (window.location.pathname === '/floor-list') ? 'list' : 'map';
         this.viewOptions = [
             { label: 'Map', value: 'map' },
             { label: 'List', value: 'list' },

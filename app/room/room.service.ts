@@ -21,4 +21,10 @@ export class RoomService {
         return this.http.get(url)
             .map((res: Response) => res.json());
     }
+
+    public getRoom(id: number): Observable<Room> {
+        const url = `${this.baseUrl}/room${id}.json`;
+        return this.http.get(url)
+            .map((res: Response) => res.json());
+    }
 }

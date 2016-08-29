@@ -9,12 +9,13 @@ import {
     SelectButtonModule,
     ToggleButtonModule }                from 'primeng/primeng';
 
-import { BrowserModule }                 from '@angular/platform-browser'
+import { BrowserModule }                from '@angular/platform-browser'
 import { FormsModule }                  from '@angular/forms';
 
 import { FilterPanelComponent }         from './filter-panel/filter-panel.component';
 import { FloorMapComponent }            from './floor-map/floor-map.component';
 import { FloorListComponent }           from './floor-list/floor-list.component';
+import { RoomModule } from "../room/room.module";
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { FloorListComponent }           from './floor-list/floor-list.component'
         BrowserModule,
         DropdownModule,
         FormsModule,
+        RoomModule,
         routing,
         SelectButtonModule,
         ToggleButtonModule

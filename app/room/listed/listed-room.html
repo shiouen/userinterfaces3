@@ -1,0 +1,24 @@
+<div class="listed-room">
+    <p-fieldset class="listed-room__properties" [legend]="room.name" (click)="navigate()">
+        <ul>
+            <li class="listed-room__property" *ngIf="panel.showType">
+                Room type: {{ room.type }}
+            </li>
+            <li class="listed-room__property" *ngIf="panel.showDescription">
+                Description: {{ room.description }}
+            </li>
+            <li class="listed-room__property" *ngIf="panel.showCapacity">
+                Capacity: {{ room.capacity }}
+            </li>
+            <li class="listed-room__property" *ngIf="panel.showBoardType">
+                Board type: {{ room.boardType }}
+            </li>
+            <li class="listed-room__property" *ngIf="panel.showHasProjector">
+                Has projector: {{ room.hasProjector }}
+            </li>
+            <li class="listed-room__property" *ngIf="panel.showHasSoundReinforcement">
+                Has sound reinforcement: {{ room.hasSoundReinforcement }}
+            </li>
+        </ul>
+    </p-fieldset>
+</div>

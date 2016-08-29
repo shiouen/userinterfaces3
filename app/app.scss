@@ -7,6 +7,12 @@ $fonts: Roboto, Helvetica Neue, sans-serif;
     font-family: $fonts;
 
     &__container {
-        padding: 20px;
+        padding: 10px;
+    }
+
+    @media (min-width: 376px) {
+        &__container {
+            padding: 20px;
+        }
     }
 }

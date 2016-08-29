@@ -1,0 +1,11 @@
+{
+    "id": 0,
+    "name": "R001",
+    "type": "Auditory",
+    "description": "Primary auditory.",
+    "capacity": 300,
+    "boardType": "Smart",
+    "hasProjector": true,
+    "hasSoundReinforcement": true,
+    "floor": 0
+}

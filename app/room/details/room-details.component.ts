@@ -1,8 +1,12 @@
 'use strict';
 
 import { Component, OnInit }        from '@angular/core';
+import { ActivatedRoute, Params }   from "@angular/router";
 
-import { RoomService } from "../room.service";
+import { RoomService }              from "../room.service";
+import { Room }                     from "../room.model";
+
+import { Observable }               from "rxjs/Rx";
 
 @Component({
     selector: 'campus-info',
@@ -11,7 +15,16 @@ import { RoomService } from "../room.service";
 })
 
 export class RoomDetailsComponent implements OnInit {
-    constructor(private roomService: RoomService) { }
+    private _room: Room;
 
-    ngOnInit() { }
+    constructor(private _roomService: RoomService, private _route: ActivatedRoute) { }
+
+    public ngOnInit(): void {
+        this._route.params.subscribe((params: Observable<Params>) => {
+            let id = +params['id'];
+            this._roomService.getRoom(id).subscribe((room: Room) => {
+                this._room = room;
+            });
+        });
+    }
 }

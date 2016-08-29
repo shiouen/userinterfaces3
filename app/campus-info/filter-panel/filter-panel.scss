@@ -20,6 +20,14 @@ $text-color: white;
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+    @media (min-width: 376px) {
+        margin: 25px;
+    }
+
+    @media (min-width: 769px) {
+        margin: 40px;
+    }
 }
 
 .room-settings {
