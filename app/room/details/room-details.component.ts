@@ -27,4 +27,6 @@ export class RoomDetailsComponent implements OnInit {
             });
         });
     }
+
+    public get room(): Room { return this._room;}
 }

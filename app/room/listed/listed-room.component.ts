@@ -18,6 +18,7 @@ import { FilterPanelService } from "../../campus-info/filter-panel/filter-panel.
 })
 export class ListedRoomComponent {
     @Input() public room: Room;
+    @Input() public noFilter: boolean;
 
     constructor(private _panel: FilterPanelService, private _router: Router) { }
 
