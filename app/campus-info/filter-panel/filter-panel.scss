@@ -1,6 +1,56 @@
 $background: #404a4e;
+$fonts: Roboto, Helvetica Neue, sans-serif;
+$text-color: white;
 
 .filter-panel {
     background-color: $background;
     box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
+    color: $text-color;
+    font-family: $fonts;
+    margin: 20px;
+    padding: 20px;
+
+    &__heading {
+        margin-top: 0;
+    }
+
+    &__settings {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.room-settings {
+    &__toggles {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding-left: 20px;
+
+        p-toggleButton {
+            margin: 5px;
+        }
+    }
+}
+
+.floor-settings {
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        padding-left: 20px;
+
+        p-selectButton,
+        p-dropdown {
+            margin: 5px;
+        }
+    }
 }

@@ -1,3 +1,31 @@
 <div class="filter-panel">
-    hi
+    <h2 class="filter-panel__heading">
+        Filter panel
+    </h2>
+    <div class="filter-panel__settings">
+        <div class="room-settings">
+            <h3>
+                Room settings
+            </h3>
+            <div class="room-settings__toggles">
+                <p-toggleButton [(ngModel)]="showBoardType" onLabel="Board Type" offLabel="Board Type" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+                <p-toggleButton [(ngModel)]="showCapacity" onLabel="Capacity" offLabel="Capacity" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+                <p-toggleButton [(ngModel)]="showDescription" onLabel="Description" offLabel="Description" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+                <p-toggleButton [(ngModel)]="showHasProjector" onLabel="Has Projector" offLabel="Has Projector" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+                <p-toggleButton [(ngModel)]="showHasSoundReinforcement" onLabel="Has Sound Reinforcement" offLabel="Has Sound Reinforcement" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+                <p-toggleButton [(ngModel)]="showName" onLabel="Name" offLabel="Name" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+                <p-toggleButton [(ngModel)]="showType" onLabel="Type" offLabel="Type" onIcon="fa-check-square" offIcon="fa-square" (onChange)="pushChanges()"></p-toggleButton>
+            </div>
+        </div>
+
+        <div class="floor-settings">
+            <h3>
+                Floor settings
+            </h3>
+            <div class="floor-settings__buttons">
+                <p-selectButton [options]="viewOptions" [(ngModel)]="view" (onChange)="navigateFloorView()"></p-selectButton>
+                <p-dropdown [options]="floorOptions" [(ngModel)]="floor" (onChange)="pushChanges()"></p-dropdown>
+            </div>
+        </div>
+    </div>
 </div>

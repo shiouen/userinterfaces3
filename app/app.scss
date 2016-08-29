@@ -1,18 +1,12 @@
 $background: #20272A;
 $foreground: #313B3F;
+$fonts: Roboto, Helvetica Neue, sans-serif;
 
 .app {
     background-color: $background;
-}
+    font-family: $fonts;
 
-.container {
-    display: flex;
-
-    &--column {
-        flex-direction: column;
-    }
-
-    &--row {
-        flex-direction: row;
+    &__container {
+        padding: 20px;
     }
 }

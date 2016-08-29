@@ -1,0 +1,12 @@
+$background: #f5f7f8;
+$fonts: Roboto, Helvetica Neue, sans-serif;
+$text-color: #313b3f;
+
+.floor-list {
+    background-color: $background;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.26);
+    color: $text-color;
+    font-family: $fonts;
+    margin: 20px;
+    padding: 20px;
+}
