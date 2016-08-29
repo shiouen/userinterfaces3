@@ -13,15 +13,18 @@ import { RoomService }            from "../../room/room.service";
     styleUrls: [ 'dist/app/campus-info/floor-map/floor-map.css' ]
 })
 export class FloorMapComponent implements OnInit {
-    public rooms: Room[];
+    private _rooms: Room[];
 
-    constructor(private filterPanelService: FilterPanelService, private roomService: RoomService) {
-
-    }
+    constructor(private _filterPanelService: FilterPanelService, private _roomService: RoomService) { }
 
     public ngOnInit(): void {
-        this.roomService.getRooms().subscribe((rooms: Room[]) => {
+        this._roomService.getRooms().subscribe((rooms: Room[]) => {
             this.rooms = rooms;
         });
     }
+
+    public get floor(): number { return this._filterPanelService.floor; }
+
+    public get rooms(): Room[] { return this._rooms; }
+    public set rooms(rooms: Room[]) { this._rooms = rooms; }
 }

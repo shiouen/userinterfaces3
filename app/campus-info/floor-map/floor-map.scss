@@ -10,6 +10,13 @@ $text-color: #313b3f;
     margin: 20px;
     padding: 20px;
 
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     @media (min-width: 376px) {
         margin: 25px;
     }

@@ -1,0 +1,11 @@
+{
+    "id": 11,
+    "name": "R202",
+    "type": "Other",
+    "description": "Chill.",
+    "capacity": 25,
+    "boardType": "Marker",
+    "hasProjector": true,
+    "hasSoundReinforcement": true,
+    "floor": 2
+}

@@ -1,0 +1,11 @@
+{
+    "id": 7,
+    "name": "R102",
+    "type": "Class",
+    "description": "Classroom description.",
+    "capacity": 50,
+    "boardType": "Marker",
+    "hasProjector": true,
+    "hasSoundReinforcement": false,
+    "floor": 1
+}

@@ -1,0 +1,11 @@
+{
+    "id": 2,
+    "name": "R002",
+    "type": "Auditory",
+    "description": "Smaller auditory.",
+    "capacity": 175,
+    "boardType": "Marker",
+    "hasProjector": true,
+    "hasSoundReinforcement": false,
+    "floor": 0
+}

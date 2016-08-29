@@ -1,0 +1,11 @@
+{
+    "id": 5,
+    "name": "R005",
+    "type": "Other",
+    "description": "Storage room.",
+    "capacity": 0,
+    "boardType": "None",
+    "hasProjector": false,
+    "hasSoundReinforcement": false,
+    "floor": 0
+}

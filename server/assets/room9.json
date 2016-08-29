@@ -1,0 +1,11 @@
+{
+    "id": 9,
+    "name": "R104",
+    "type": "Sanitary",
+    "description": "Toilets.",
+    "capacity": 25,
+    "boardType": "None",
+    "hasProjector": false,
+    "hasSoundReinforcement": false,
+    "floor": 1
+}

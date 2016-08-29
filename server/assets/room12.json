@@ -1,0 +1,11 @@
+{
+    "id": 12,
+    "name": "R203",
+    "type": "Sanitary",
+    "description": "Toilets.",
+    "capacity": 25,
+    "boardType": "None",
+    "hasProjector": false,
+    "hasSoundReinforcement": false,
+    "floor": 2
+}

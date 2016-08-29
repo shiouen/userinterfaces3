@@ -1,3 +1,9 @@
 <div class="floor-map">
-
+    <div class="floor-map__container">
+        <div *ngFor="let room of rooms">
+            <div *ngIf="room.floor === floor">
+                <listed-room [room]="room" [noFilter]="false"></listed-room>
+            </div>
+        </div>
+    </div>
 </div>

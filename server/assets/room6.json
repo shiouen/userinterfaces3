@@ -1,0 +1,11 @@
+{
+    "id": 6,
+    "name": "R101",
+    "type": "Class",
+    "description": "Classroom description.",
+    "capacity": 50,
+    "boardType": "Smart",
+    "hasProjector": true,
+    "hasSoundReinforcement": true,
+    "floor": 1
+}

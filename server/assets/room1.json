@@ -1,5 +1,5 @@
 {
-    "id": 0,
+    "id": 1,
     "name": "R001",
     "type": "Auditory",
     "description": "Primary auditory.",
@@ -8,4 +8,4 @@
     "hasProjector": true,
     "hasSoundReinforcement": true,
     "floor": 0
-}
+},

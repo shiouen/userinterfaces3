@@ -1,0 +1,11 @@
+{
+    "id": 8,
+    "name": "R103",
+    "type": "Class",
+    "description": "Classroom description.",
+    "capacity": 50,
+    "boardType": "Chalk",
+    "hasProjector": true,
+    "hasSoundReinforcement": false,
+    "floor": 1
+}

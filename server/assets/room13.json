@@ -1,0 +1,11 @@
+{
+    "id": 13,
+    "name": "R204",
+    "type": "Office",
+    "description": "Office yay description.",
+    "capacity": 5,
+    "boardType": "Marker",
+    "hasProjector": false,
+    "hasSoundReinforcement": false,
+    "floor": 2
+}

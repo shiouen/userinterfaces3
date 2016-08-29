@@ -1,0 +1,11 @@
+{
+    "id": 3,
+    "name": "R003",
+    "type": "Study",
+    "description": "Primary study.",
+    "capacity": 150,
+    "boardType": "None",
+    "hasProjector": false,
+    "hasSoundReinforcement": false,
+    "floor": 0
+}
