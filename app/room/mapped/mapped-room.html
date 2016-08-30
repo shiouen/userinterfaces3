@@ -1,0 +1,32 @@
+<div class="mapped-room">
+    <p-fieldset class="mapped-room__properties" [legend]="room.name">
+        <div class="properties__container">
+            <ul>
+                <li class="mapped-room__property" *ngIf="panel.showName || noFilter">
+                    Name: {{ room.name }}
+                </li>
+                <li class="mapped-room__property" *ngIf="panel.showType || noFilter">
+                    Room type: {{ room.type }}
+                </li>
+                <li class="mapped-room__property" *ngIf="panel.showDescription || noFilter">
+                    Description: <br />{{ room.description }}
+                </li>
+                <li class="mapped-room__property" *ngIf="panel.showCapacity || noFilter">
+                    Capacity: {{ room.capacity }}
+                </li>
+                <li class="mapped-room__property" *ngIf="panel.showBoardType || noFilter">
+                    Board type: {{ room.boardType }}
+                </li>
+                <li class="mapped-room__property" *ngIf="panel.showHasProjector || noFilter">
+                    Has a projector: {{ room.hasProjector ? "yes" : "no" }}
+                </li>
+                <li class="mapped-room__property" *ngIf="panel.showHasSoundReinforcement || noFilter">
+                    Has sound reinf.: {{ room.hasSoundReinforcement ? "yes" : "no" }}
+                </li>
+            </ul>
+            <div class="mapped-room__desk-container">
+                <desk-popup class="mapped-room__desk" [desk]="desk" *ngFor="let desk of room.desks"></desk-popup>
+            </div>
+        </div>
+    </p-fieldset>
+</div>

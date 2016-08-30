@@ -1,6 +1,5 @@
 <div class="floor-list">
     <div class="floor-list__container">
-        <div *ngFor="let room of rooms">
-        </div>
+        <listed-room [room]="room" [noFilter]="false" [hidden]="room.floor !== floor" *ngFor="let room of rooms"></listed-room>
     </div>
 </div>

@@ -1,0 +1,32 @@
+.mapped-room {
+    font-sieze: 11px;
+
+    &__properties {
+
+        .ui-fieldset-legend {
+            display: none;
+        }
+
+        ul {
+            padding-left: 10px;
+        }
+    }
+
+    &__desk {
+        margin: 10px;
+    }
+
+    &__desk-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.properties {
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
