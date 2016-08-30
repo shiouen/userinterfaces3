@@ -25,3 +25,9 @@ $text-color: #313b3f;
         margin: 40px;
     }
 }
+
+@media (min-width: 769px) {
+    floor-list {
+        flex-grow: 100;
+    }
+}

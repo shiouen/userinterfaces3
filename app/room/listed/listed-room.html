@@ -1,24 +1,27 @@
 <div class="listed-room">
     <p-fieldset class="listed-room__properties" [legend]="room.name" (click)="navigate()">
-        <ul>
-            <li class="listed-room__property" *ngIf="panel.showType || noFilter">
-                Room type: {{ room.type }}
-            </li>
-            <li class="listed-room__property" *ngIf="panel.showDescription || noFilter">
-                Description: {{ room.description }}
-            </li>
-            <li class="listed-room__property" *ngIf="panel.showCapacity || noFilter">
-                Capacity: {{ room.capacity }}
-            </li>
-            <li class="listed-room__property" *ngIf="panel.showBoardType || noFilter">
-                Board type: {{ room.boardType }}
-            </li>
-            <li class="listed-room__property" *ngIf="panel.showHasProjector || noFilter">
-                Has a projector: {{ room.hasProjector ? "yes" : "no" }}
-            </li>
-            <li class="listed-room__property" *ngIf="panel.showHasSoundReinforcement || noFilter">
-                Has sound reinforcement: {{ room.hasSoundReinforcement ? "yes" : "no" }}
-            </li>
-        </ul>
+        <div class="properties__container">
+            <ul>
+                <li class="listed-room__property" *ngIf="panel.showType || noFilter">
+                    Room type: {{ room.type }}
+                </li>
+                <li class="listed-room__property" *ngIf="panel.showDescription || noFilter">
+                    Description: {{ room.description }}
+                </li>
+                <li class="listed-room__property" *ngIf="panel.showCapacity || noFilter">
+                    Capacity: {{ room.capacity }}
+                </li>
+                <li class="listed-room__property" *ngIf="panel.showBoardType || noFilter">
+                    Board type: {{ room.boardType }}
+                </li>
+                <li class="listed-room__property" *ngIf="panel.showHasProjector || noFilter">
+                    Has a projector: {{ room.hasProjector ? "yes" : "no" }}
+                </li>
+                <li class="listed-room__property" *ngIf="panel.showHasSoundReinforcement || noFilter">
+                    Has sound reinforcement: {{ room.hasSoundReinforcement ? "yes" : "no" }}
+                </li>
+            </ul>
+            <desk-popup class="listed-room__desk" [desk]="desk" *ngFor="let desk of room.desks"></desk-popup>
+        </div>
     </p-fieldset>
 </div>

@@ -1,6 +1,10 @@
 'use strict';
 
-import { Component, OnInit }        from '@angular/core';
+import {
+    Component,
+    OnInit,
+    ViewEncapsulation }             from '@angular/core';
+
 import { ActivatedRoute, Params }   from "@angular/router";
 
 import { RoomService }              from "../room.service";
@@ -9,9 +13,10 @@ import { Room }                     from "../room.model";
 import { Observable }               from "rxjs/Rx";
 
 @Component({
-    selector: 'campus-info',
+    selector: 'room-details',
     templateUrl: 'app/room/details/room-details.html',
-    styleUrls: [ 'dist/app/room/details/room-details.css' ]
+    styleUrls: [ 'dist/app/room/details/room-details.css' ],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class RoomDetailsComponent implements OnInit {

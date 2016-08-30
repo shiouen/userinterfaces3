@@ -1,11 +1,12 @@
 'use strict';
 
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'navbar',
     templateUrl: 'app/navbar/navbar.html',
-    styleUrls: [ 'dist/app/navbar/navbar.css' ]
+    styleUrls: [ 'dist/app/navbar/navbar.css' ],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class NavbarComponent {

@@ -1,0 +1,23 @@
+<div class="desk">
+    <p-dialog class="desk-dialog" header="Desk user information" (click)="$event.cancelBubble=true;"[(modal)]="modal" [(resizable)]="resizable" [(visible)]="display">
+        <div class="desk-properties">
+            <ul>
+                <li>
+                    Name: {{ desk?.name }}
+                </li>
+                <li>
+                    Email: {{ desk?.email }}
+                </li>
+                <li>
+                    Function: {{ desk?.function }}
+                </li>
+                <li>
+                    Phone: {{ desk?.phone }}
+                </li>
+            </ul>
+            <img class="desk-properties__picture" [src]="desk?.picture">
+        </div>
+    </p-dialog>
+
+    <button class="dialog__button" type="text" (click)="showDialog($event)" pButton label="Desk"></button>
+</div>

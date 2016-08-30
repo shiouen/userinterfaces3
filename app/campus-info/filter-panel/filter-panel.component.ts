@@ -1,16 +1,17 @@
 'use strict';
 
-import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { Component, ViewEncapsulation } from '@angular/core';
+import { Router }                       from "@angular/router";
 
-import { SelectItem } from 'primeng/primeng';
+import { SelectItem }                   from 'primeng/primeng';
 
-import { FilterPanelService } from "./filter-panel.service";
+import { FilterPanelService }           from "./filter-panel.service";
 
 @Component({
     selector: 'filter-panel',
     templateUrl: 'app/campus-info/filter-panel/filter-panel.html',
-    styleUrls: [ 'dist/app/campus-info/filter-panel/filter-panel.css' ]
+    styleUrls: [ 'dist/app/campus-info/filter-panel/filter-panel.css' ],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class FilterPanelComponent {

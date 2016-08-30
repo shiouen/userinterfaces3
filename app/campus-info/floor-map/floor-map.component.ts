@@ -1,6 +1,9 @@
 'use strict';
 
-import { Component, OnInit }            from "@angular/core";
+import {
+    Component,
+    OnInit,
+    ViewEncapsulation }            from "@angular/core";
 
 import { FilterPanelService }   from "../filter-panel/filter-panel.service";
 
@@ -10,7 +13,8 @@ import { RoomService }            from "../../room/room.service";
 @Component({
     selector: 'floor-map',
     templateUrl: 'app/campus-info/floor-map/floor-map.html',
-    styleUrls: [ 'dist/app/campus-info/floor-map/floor-map.css' ]
+    styleUrls: [ 'dist/app/campus-info/floor-map/floor-map.css' ],
+    encapsulation: ViewEncapsulation.None
 })
 export class FloorMapComponent implements OnInit {
     private _rooms: Room[];

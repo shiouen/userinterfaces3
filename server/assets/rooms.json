@@ -102,12 +102,21 @@
         "id": 10,
         "name": "R201",
         "type": "Office",
-        "description": "Primary auditory.",
-        "capacity": 300,
+        "description": "Principal's office.",
+        "capacity": 3,
         "boardType": "Smart",
         "hasProjector": true,
         "hasSoundReinforcement": true,
-        "floor": 2
+        "floor": 2,
+        "desks": [
+            {
+                "name": "the principal",
+                "picture": "/app/assets/images/desk/picture.png",
+                "function": "principal",
+                "email": "princip@mail.com",
+                "phone": "003245430032"
+            }
+        ]
     },
     {
         "id": 11,
@@ -140,6 +149,22 @@
         "boardType": "Marker",
         "hasProjector": false,
         "hasSoundReinforcement": false,
-        "floor": 2
+        "floor": 2,
+        "desks": [
+            {
+                "name": "Linwood Ibrahim",
+                "picture": "/app/assets/images/desk/picture.png",
+                "function": "developer",
+                "email": "linib@mail.com",
+                "phone": "003245430032"
+            },
+            {
+                "name": "Cheree Gin",
+                "picture": "/app/assets/images/desk/picture.png",
+                "function": "clerk",
+                "email": "chereeg@mail.com",
+                "phone": "003245430032"
+            }
+        ]
     }
 ]

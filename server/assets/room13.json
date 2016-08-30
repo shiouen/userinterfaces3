@@ -2,10 +2,26 @@
     "id": 13,
     "name": "R204",
     "type": "Office",
-    "description": "Office yay description.",
+    "description": "...",
     "capacity": 5,
     "boardType": "Marker",
     "hasProjector": false,
     "hasSoundReinforcement": false,
-    "floor": 2
+    "floor": 2,
+    "desks": [
+        {
+            "name": "Linwood Ibrahim",
+            "picture": "/app/assets/images/desk/picture.png",
+            "function": "developer",
+            "email": "linib@mail.com",
+            "phone": "003245430032"
+        },
+        {
+            "name": "Cheree Gin",
+            "picture": "/app/assets/images/desk/picture.png",
+            "function": "clerk",
+            "email": "chereeg@mail.com",
+            "phone": "003245430032"
+        }
+    ]
 }

@@ -7,5 +7,14 @@
     "boardType": "Smart",
     "hasProjector": true,
     "hasSoundReinforcement": true,
-    "floor": 2
+    "floor": 2,
+    "desks": [
+        {
+            "name": "the principal",
+            "picture": "/app/assets/images/desk/picture.png",
+            "function": "principal",
+            "email": "princip@mail.com",
+            "phone": "003245430032"
+        }
+    ]
 }

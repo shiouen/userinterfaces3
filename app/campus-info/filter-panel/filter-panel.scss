@@ -27,6 +27,7 @@ $text-color: white;
 
     @media (min-width: 769px) {
         margin: 40px;
+        order: 2;
     }
 }
 
@@ -60,5 +61,11 @@ $text-color: white;
         p-dropdown {
             margin: 5px;
         }
+    }
+}
+
+@media (min-width: 769px) {
+    filter-panel {
+        order: 1;
     }
 }

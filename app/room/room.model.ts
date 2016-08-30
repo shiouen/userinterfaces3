@@ -2,6 +2,7 @@
 
 import { BoardType } from './board-type.enum';
 import { RoomType } from './room-type.enum';
+import { Desk } from "./desk/desk.model";
 
 export class Room {
     /**
@@ -16,6 +17,7 @@ export class Room {
      * @param _hasProjector {Boolean} Whether a projector is provided.
      * @param _hasSoundReinforcement {Boolean} Whether sound reinforcement is provided.
      * @param _floor {Number} The floor the room is on.
+     * @param _desks {Desk} The information about possible desks.
      */
     constructor(
         private _id: number,
@@ -26,7 +28,8 @@ export class Room {
         private _boardType: BoardType,
         private _hasProjector: boolean,
         private _hasSoundReinforcement: boolean,
-        private _floor: number) { }
+        private _floor: number,
+        private _desks: Desk[]) { }
 
     public get id(): number { return this._id; }
     public get name(): string { return this._name; }
@@ -36,16 +39,18 @@ export class Room {
     public get boardType(): BoardType { return this._boardType; }
     public get hasProjector(): boolean { return this._hasProjector; }
     public get hasSoundReinforcement(): boolean { return this._hasSoundReinforcement; }
-    public get floor(): number { return this._floor }
+    public get floor(): number { return this._floor; }
+    public get desks(): Desk[] { return this._desks; }
 
     public set id(id: number) { this._id = id; }
-    public set name(name: string) { this._name; }
-    public set type(type: RoomType) { this._type; }
-    public set description(description: string) { this._description; }
-    public set capacity(capacity: number) { this._capacity; }
-    public set boardType(boardType: BoardType) { this._boardType; }
-    public set hasProjector(hasProjector: boolean) { this._hasProjector; }
-    public set hasSoundReinforcement(hasSoundReinforcement: boolean) { this._hasSoundReinforcement; }
-    public set floor(floor: number) { this._floor; }
+    public set name(name: string) { this._name = name; }
+    public set type(type: RoomType) { this._type = type; }
+    public set description(description: string) { this._description = description; }
+    public set capacity(capacity: number) { this._capacity = capacity; }
+    public set boardType(boardType: BoardType) { this._boardType = boardType; }
+    public set hasProjector(hasProjector: boolean) { this._hasProjector = hasProjector; }
+    public set hasSoundReinforcement(hasSoundReinforcement: boolean) { this._hasSoundReinforcement = hasSoundReinforcement; }
+    public set floor(floor: number) { this._floor = floor; }
+    public set desks(desks: Desk[]) { this._desks = desks; }
 
 }

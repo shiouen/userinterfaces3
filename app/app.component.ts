@@ -1,6 +1,9 @@
 'use strict';
 
-import { Component, OnInit }            from '@angular/core';
+import {
+    Component,
+    OnInit,
+    ViewEncapsulation }                 from '@angular/core';
 
 import { Room }                         from './room/room.model';
 import { RoomService }                  from './room/room.service';
@@ -8,7 +11,8 @@ import { RoomService }                  from './room/room.service';
 @Component({
     selector: 'campus-info',
     templateUrl: 'app/app.html',
-    styleUrls: [ 'dist/app/app.css' ]
+    styleUrls: [ 'dist/app/app.css' ],
+    encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent implements OnInit {

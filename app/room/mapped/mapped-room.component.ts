@@ -1,6 +1,10 @@
 'use strict';
 
-import { Component, Input, ViewEncapsulation } from "@angular/core";
+import {
+    Component,
+    Input,
+    ViewEncapsulation } from "@angular/core";
+import { Router } from "@angular/router";
 
 import { Room } from "../../room/room.model";
 import { FilterPanelService } from "../../campus-info/filter-panel/filter-panel.service";
@@ -12,12 +16,14 @@ import { FilterPanelService } from "../../campus-info/filter-panel/filter-panel.
     encapsulation: ViewEncapsulation.None
 })
 export class MappedRoomComponent {
-    @Input() private _room: Room;
+    @Input() public room: Room;
+    @Input() public noFilter: boolean;
 
-    constructor(private _panel: FilterPanelService) { }
-
-    public get room(): Room { return this._room; }
-    public set room(room: Room) { this._room = room; }
+    constructor(private _panel: FilterPanelService, private _router: Router) { }
 
     public get panel(): FilterPanelService { return this._panel; }
+
+    public navigate(): void {
+        this._router.navigate(['room/', this.room.id]);
+    }
 }

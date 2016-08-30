@@ -3,17 +3,22 @@
 import { NgModule }                     from '@angular/core';
 import { BrowserModule }                from '@angular/platform-browser'
 
-import { FieldsetModule }               from 'primeng/primeng';
+import {
+    ButtonModule,
+    DialogModule,
+    FieldsetModule }                    from 'primeng/primeng';
 
-import { RoomDetailsComponent }         from "./details/room-details.component";
-import { RoomService }                  from "./room.service";
-import { ListedRoomComponent }          from "./listed/listed-room.component";
-import { MappedRoomComponent }          from "./mapped/mapped-room.component";
+import { DeskComponent }                from './desk/desk.component'
+import { RoomDetailsComponent }         from './details/room-details.component';
+import { RoomService }                  from './room.service';
+import { ListedRoomComponent }          from './listed/listed-room.component';
+import { MappedRoomComponent }          from './mapped/mapped-room.component';
 
-import { appRoutingProviders, routing } from "./room.routing";
+import { appRoutingProviders, routing } from './room.routing';
 
 @NgModule({
     declarations: [
+        DeskComponent,
         ListedRoomComponent,
         MappedRoomComponent,
         RoomDetailsComponent
@@ -24,6 +29,8 @@ import { appRoutingProviders, routing } from "./room.routing";
     ],
     imports: [
         BrowserModule,
+        ButtonModule,
+        DialogModule,
         FieldsetModule,
         routing
     ],
